@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test</title>
+
+<style type="text/css">
+
+/* Alert */
+#alert_box { font-family:dotum; font-size:12px; position:absolute; top:50%; left:50%; width:468px; height:212px; margin-top:-115px; margin-left:-184px;}
+#alert_box h2 {color:#131313; font:normal 23px tahoma; height:32px; padding:0; margin:0;}
+#alert_box h2 span{color:#FF6100;}
+#alert_box .error { border:1px solid #76A8FF; background:#F4F7FD; padding:18px 20px 20px 20px; height:180px;}
+#alert_box .error dl {clear:both; color:#666; margin-left:40px;}
+#alert_box .error dt {font-weight:bold; margin-bottom:5px; color:#0000FF;}
+#alert_box .error dt span {font-weight:bold; color:#313131;}
+#alert_box .error dd {color:#585858; line-height:17px;padding:0; margin:0 0 0 15px}
+#alert_box .error dd a {color:#585858; text-decoration:none;}
+#alert_box .error dd a:hover {color:#FF8400}
+#alert_box .error hr {display:block; background:#D8E4FB; color:#D8E4FB ; width:325px; border:none; height:1px; margin:13px 0 13px  0; clear:both;}
+*+html #alert_box .error hr {margin:3px 0 5px 0; padding:0;  height:1px; }
+</style>
+<script>
+  window.onload = function(){
+    var button = document.getElementById("button"); 
+    button.onclick = function(){
+      testCallStack();
+    }
+  }
+  
+  function testCallStack(){
+    for(var i=0 ; i<5 ; i++){
+      console.log("cosole입니다");
+      alert("hello Java World");
+    }
+  }
+</script>
+</head>
+<body>
+  <div id="alert_box">
+    <h2><span>Hello</span> World</h2>
+    <div class="error">
+      <dl>
+        <dt><span>></span>뭐라고 쓸 말이 없어요.</dt>
+        <dd>그냥 테스트 용입니다.</a></dd>
+      </dl>
+      <hr/>
+      <dl>
+        <dt><span>></span>It is difficult to say something special.</dt>
+        <dd>This is just a test</dd>
+      </dl>
+      <input id=button type="button" value="클릭"/>
+      <form method="post">
+        <input type="text" name="name"/>
+        <button type="submit">submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
