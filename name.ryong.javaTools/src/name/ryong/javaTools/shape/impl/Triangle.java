@@ -5,11 +5,11 @@ import name.ryong.javaTools.shape.Shape;
  * 삼각형
  * @author ryong
  */
-public class Triagle implements Shape {
+public class Triangle implements Shape {
   private double height;
   private double width;
   
-  public Triagle(double height, double width){
+  public Triangle(double height, double width){
     this.height = height;
     this.width = width;
   }
